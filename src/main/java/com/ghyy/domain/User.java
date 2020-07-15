@@ -1,11 +1,24 @@
 package com.ghyy.domain;
 
-public class User {
+import com.opensymphony.xwork2.Action;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class User extends ActionSupport {
 	private int id;
 	private String username;
 	private String password;
 	private String email;
 	private String phone;
+
+	public User user;
+
+	public User(User user) {
+		this.user = user;
+	}
+
+	public User() {
+
+	}
 
 	public int getId() {
 		return id;
@@ -51,6 +64,11 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + ", email=" + email + ", phone="
 				+ phone + "]";
+	}
+
+	public String execute() {
+
+		return Action.SUCCESS;
 	}
 
 }
