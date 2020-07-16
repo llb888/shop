@@ -1,24 +1,12 @@
 package com.ghyy.domain;
 
-import com.opensymphony.xwork2.Action;
-import com.opensymphony.xwork2.ActionSupport;
 
-public class User extends ActionSupport {
-	private int id;
+public class User {
+	public int id;
 	private String username;
 	private String password;
-	private String email;
 	private String phone;
-
-	public User user;
-
-	public User(User user) {
-		this.user = user;
-	}
-
-	public User() {
-
-	}
+	private String email;
 
 	public int getId() {
 		return id;
@@ -44,14 +32,6 @@ public class User extends ActionSupport {
 		this.password = password;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 	public String getPhone() {
 		return phone;
 	}
@@ -60,15 +40,13 @@ public class User extends ActionSupport {
 		this.phone = phone;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", email=" + email + ", phone="
-				+ phone + "]";
+	public String getEmail() {
+		return email;
 	}
 
-	public String execute() {
+	public void setEmail(String email) {
+		this.email = email;
 
-		return Action.SUCCESS;
 	}
 
 }
